@@ -1,6 +1,6 @@
 # crtpsmn
 
-### Installation
+## Installation
 
 You can install crtpsmn from github with:
 
