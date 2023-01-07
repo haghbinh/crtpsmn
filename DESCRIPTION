@@ -1,0 +1,16 @@
+Package: crtpsmn
+Type: Package
+Title: Censored Linear Regression Models Based on Asymmetrical Heavy-Tailed Distributions
+Version: 0.0.1
+Author: c(
+    person("Hossein", "Haghbin", email = "haghbin@pgu.ac.ir", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-8416-2354")),
+    person("Mohsen", "Maleki", email = "mcs.ui.ac.ir", role = "aut")
+    )
+Maintainer: Hossein Haghbin <haghbin@pgu.ac.ir>
+Description: Methods and tools for implementing .....
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: TRUE
+RoxygenNote: 7.2.0
+Depends: R (>= 4.0), R6
+
