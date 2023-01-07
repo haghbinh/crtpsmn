@@ -7,7 +7,7 @@
 #' x <- 1
 #'
 #' @export
-tp_n <- R6::R6Class("TP_N",
+TP_N <- R6::R6Class("TP_N",
                     public = list(
                       mean = NA,
                       sd = NA,
@@ -21,14 +21,20 @@ tp_n <- R6::R6Class("TP_N",
                         self$sd <- sd
                         self$gamma <- gamma
                       },
-                      density = function(x){
+                      pdf = function(x){
                         y <- ifelse(x<self$mean,
                                     2*(1-self$gamma)*dnorm(x,self$mean,self$sd*(1-self$gamma)),
                                     2*self$gamma*dnorm(x,self$mean,self$sd*self$gamma))
                         return(y)
-                        }
+                      },
+                      cdf = function(x){
+                        y <- ifelse(x<self$mean,
+                                    2*(1-self$gamma)*pnorm(x,self$mean,self$sd*(1-self$gamma)),
+                                    2*self$gamma*pnorm(x,self$mean,self$sd*self$gamma))
+                        return(y)
+                      }
                     ))
 init_tpn_check <- function(x,mean,sd,gamma) TRUE
 
 #' @export
-TP_N <- function(mean=0,sd=1,gamma)  tp_n$new(mean,sd,gamma)
+TPN <- function(mean=0,sd=1,gamma)  TP_N$new(mean,sd,gamma)
