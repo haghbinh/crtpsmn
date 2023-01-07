@@ -1,10 +1,10 @@
-# ReMFPCA
+# crtpsmn
 
 ### Installation
 
-You can install ReMFPCA from github with:
+You can install crtpsmn from github with:
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("haghbinh/ReMFPCA")
+remotes::install_github("haghbinh/crtpsmn")
 ```
